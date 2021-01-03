@@ -1,0 +1,116 @@
+Introduction to Camunda:
+
+Camunda's core is a native BPMN 2.0 process engine that runs inside the JAVA VIRTUAL MACHINE.
+It integrates with JAVA EE 6 and it's a perfect match for the Spring Framework.
+Stack of tools are available for Human workflow management, Operations and Monitoring.
+
+
+
+
+==========================================================================================================================
+
+
+
+
+Business Analyst/					End User							Operator			Administrator
+Developer                              |							(technical/ business)         |
+    |                        +---------+----------+                         |                     |
+	|                        |                    |                         |                     |
+Modeler                  Tasklist            Custom Application			 Cockpit                Admin
+	|						 |                    |                         |                     |
+	|				   (Rest)|		              | (Rest/ JAVA)            | (Rest)              | (Rest) 
+	|                        +--------------------+                         |                     |
+	|									|							        |                     |    
+	|                          _________|________________                   |                     |
+	|	                      |		Rest/ JAVA API       |                  |                     |
+	|                         |   -------------------    |------------------+---------------------+
+File Repository---------------|        Engine            |
+							  |	   BPMN, CMMN and DMN    |
+							  |__________________________|
+							              |
+									  Database
+
+
+Process engine and Infrastructure:
+==================================================
+The process engine is a JAVA library responsible for executing BPMN 2.0 processes, CMMN 1.1 Cases and DMN 1.1 decisions.
+It has a built in H2 relational database for persistence.
+It uses MyBatis as ORM(Object Relational Mapping).
+
+Modeler:
+==================================================
+Open-source project for the modeling framework and toolkits.
+We can model BPMN 2.0 and CMMN 1.1 diagrams as well as DMN 1.1 decision tables with this tool.
+
+
+Camunda Ecosystem:
+===========================
+- 	Camunda Modeler.
+-	Server.
+
+
+-	Cockpit (Used to identify instances currently running).
+-	Tasklist (Used for activities like starting a process).
+-	Admin.
+
+
+Camunda BPM Community Vs Enterprise:
+=============================================
+Edition comparision								Community			Enterprise
+---------------------------------------------------------------------------------
+Engine, Modeler										Y					Y
+Web Apps: Cockpit, Admin, Tasklist					Y					Y
+Optimize (Reporting, Alering, Analytics)			N					Y
+Contractual warranty								N					Y
+SLA (24X7)											N					Y
+Patch release for future							N					Y
+Consulting and Training service						N					Y
+
+
+Cockpit feature comparision:
+=============================================
+Cockpit Features - Deployment Scenarios			Community			Enterprise
+----------------------------------------------------------------------------------
+Deploy BPMN and DMN									N					Y
+See deployed BPMN and DMN							Y					Y
+Undeploy/ Delete BPMN and DMN						Y					Y
+History view										N					Y
+
+
+
+=============================================
+Cockpit Features - BPMN Process Operation		Community			Enterprise
+----------------------------------------------------------------------------------
+Search BPMN process instance by various 
+criteria											N					Y
+----------------------------------------------------------------------------------
+Inpect current state of running process
+instance											Y					Y
+----------------------------------------------------------------------------------
+Inspect history of running and completed
+BPMN process instance								N					Y
+----------------------------------------------------------------------------------
+Possible to suspend, resume, cancel retry
+a single process instance							Y					Y
+----------------------------------------------------------------------------------
+Possible to suspend, resume, cancel retry
+batches for process instance						N					Y
+----------------------------------------------------------------------------------
+Restart single/ batches of process instances		N					Y
+----------------------------------------------------------------------------------
+Add, edit or delete process variable				Y					Y
+----------------------------------------------------------------------------------
+Inspect and retry a single failed job				Y					Y
+----------------------------------------------------------------------------------
+
+
+https://forum.camunda.org/
+
+
+Camunda Modeler:
+==================================================
+Modeling tools for BPMN 2.0 and CMMN 1.1 diagrams and DMN 1.1 decision tables.
+Camunda modeler is a desktop based application.
+It's easy to use. BA, Developer, Architect can work together on the same diagram.
+It's an open-source tool for modeling.
+

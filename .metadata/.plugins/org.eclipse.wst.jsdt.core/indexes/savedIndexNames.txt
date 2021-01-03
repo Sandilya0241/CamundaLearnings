@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+C:\Users\saakh\eclipse-workspace\CamundaLearnings\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+54703828.index
