@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_15e3peq" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.4.0">
+  <bpmn:process id="hello_camunda_app" name="Hello Camunda App" isExecutable="true" camunda:versionTag="v1">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0hpvuqs</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_02txewj">
+      <bpmn:incoming>Flow_09lvhs6</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0hpvuqs" sourceRef="StartEvent_1" targetRef="Activity_0ytvgry" />
+    <bpmn:sequenceFlow id="Flow_1tgzrhy" sourceRef="Activity_0ytvgry" targetRef="Activity_02pg553" />
+    <bpmn:sequenceFlow id="Flow_09lvhs6" sourceRef="Activity_02pg553" targetRef="Event_02txewj" />
+    <bpmn:userTask id="Activity_0ytvgry" name="Provide few inputs" camunda:candidateUsers="demo">
+      <bpmn:incoming>Flow_0hpvuqs</bpmn:incoming>
+      <bpmn:outgoing>Flow_1tgzrhy</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:scriptTask id="Activity_02pg553" name="Set details" scriptFormat="groovy">
+      <bpmn:incoming>Flow_1tgzrhy</bpmn:incoming>
+      <bpmn:outgoing>Flow_09lvhs6</bpmn:outgoing>
+      <bpmn:script>def name = "Sandilya"
+execution.setVariable("name", name)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:textAnnotation id="TextAnnotation_1hkn16k">
+      <bpmn:text>This is the start event</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0dkbp0b" sourceRef="StartEvent_1" targetRef="TextAnnotation_1hkn16k" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="hello_camunda_app">
+      <bpmndi:BPMNShape id="TextAnnotation_1hkn16k_di" bpmnElement="TextAnnotation_1hkn16k">
+        <dc:Bounds x="220" y="80" width="100" height="40" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0hpvuqs_di" bpmnElement="Flow_0hpvuqs">
+        <di:waypoint x="215" y="187" />
+        <di:waypoint x="290" y="187" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1tgzrhy_di" bpmnElement="Flow_1tgzrhy">
+        <di:waypoint x="390" y="187" />
+        <di:waypoint x="470" y="187" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09lvhs6_di" bpmnElement="Flow_09lvhs6">
+        <di:waypoint x="570" y="187" />
+        <di:waypoint x="702" y="187" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="169" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_02txewj_di" bpmnElement="Event_02txewj">
+        <dc:Bounds x="702" y="169" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_06imv76_di" bpmnElement="Activity_0ytvgry">
+        <dc:Bounds x="290" y="147" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_076zcw9_di" bpmnElement="Activity_02pg553">
+        <dc:Bounds x="470" y="147" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_0dkbp0b_di" bpmnElement="Association_0dkbp0b">
+        <di:waypoint x="208" y="173" />
+        <di:waypoint x="250" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

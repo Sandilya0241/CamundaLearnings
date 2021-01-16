@@ -13,32 +13,46 @@
       <bpmn:incoming>SequenceFlow1</bpmn:incoming>
       <bpmn:outgoing>Flow_0wzsuaa</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:textAnnotation id="TextAnnotation_1aga5p0">
+      <bpmn:text>It's a user task</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1upraz6" sourceRef="Activity_0ducs8e" targetRef="TextAnnotation_1aga5p0" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="helloworld">
+      <bpmndi:BPMNShape id="TextAnnotation_1aga5p0_di" bpmnElement="TextAnnotation_1aga5p0">
+        <dc:Bounds x="430" y="80" width="100" height="30" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_08va5r8_di" bpmnElement="SequenceFlow1">
-        <di:waypoint x="209" y="120" />
-        <di:waypoint x="330" y="120" />
+        <di:waypoint x="209" y="200" />
+        <di:waypoint x="330" y="200" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="337.5" y="110" width="90" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0wzsuaa_di" bpmnElement="Flow_0wzsuaa">
-        <di:waypoint x="430" y="120" />
-        <di:waypoint x="556" y="120" />
+        <di:waypoint x="430" y="200" />
+        <di:waypoint x="556" y="200" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEventProcessStarted">
-        <dc:Bounds x="173" y="102" width="36" height="36" />
+        <dc:Bounds x="173" y="182" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="171" y="218" width="41" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="EndEvent_0fkea3f_di" bpmnElement="EndEventProcessEnded">
-        <dc:Bounds x="556" y="102" width="36" height="36" />
+        <dc:Bounds x="556" y="182" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="529" y="138" width="90" height="20" />
+          <dc:Bounds x="554" y="218" width="41" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0beamz6_di" bpmnElement="Activity_0ducs8e">
-        <dc:Bounds x="330" y="80" width="100" height="80" />
+        <dc:Bounds x="330" y="160" width="100" height="80" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1upraz6_di" bpmnElement="Association_1upraz6">
+        <di:waypoint x="418" y="160" />
+        <di:waypoint x="466" y="110" />
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

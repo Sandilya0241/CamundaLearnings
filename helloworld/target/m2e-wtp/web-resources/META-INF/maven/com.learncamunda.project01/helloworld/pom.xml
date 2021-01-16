@@ -26,7 +26,10 @@
   </properties>
 
   <dependencyManagement>
+  	
+  
     <dependencies>
+      
       <dependency>
         <groupId>org.camunda.bpm</groupId>
         <artifactId>camunda-bom</artifactId>
@@ -53,7 +56,7 @@
     </dependency>
 
     <!-- Required by camunda-bpm-assert -->
-    <dependency>
+  	<dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
       <version>3.16.1</version>
@@ -160,6 +163,7 @@
   <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>
+      
       <plugin>
         <!-- Deploy to Wildfly: mvn clean wildfly:deploy See also: https://docs.jboss.org/wildfly/plugins/maven/latest/examples/deployment-example.html -->
         <groupId>org.wildfly.plugins</groupId>
